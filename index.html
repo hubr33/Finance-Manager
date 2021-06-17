@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/f85160339b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Finance manager</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h2>Finance manager</h2>
+        <nav>
+          <button class="black">czarny</button
+          ><button class="white">biały</button>
+        </nav>
+      </header>
+      <main>
+        <aside>
+          <div class="title">Twoje wydatki oraz przychody</div>
+          <div class="transactions">
+            <!-- <div class="singleOperation">
+              <div class="operationDate">31.05.2021</div>
+              <div class="operationTitle">Od mamy</div>
+              <div class="operationAmount">+50 PLN</div>
+            </div>
+            <div class="singleOperation">
+              <div class="operationDate">31.05.2021</div>
+              <div class="operationTitle">Od mamy</div>
+              <div class="operationAmount">+50 PLN</div>
+            </div> -->
+          </div>
+        </aside>
+        <section>
+          <div class="balance">
+            Twoje aktualne saldo konta:
+            <p></p>
+            PLN
+          </div>
+          <div class="addTransaction">
+            <label for="title">Tytuł transakcji</label>
+            <input
+              type="text"
+              class="titleInput"
+              placeholder="Wpisz tytuł"
+              maxlength="28"
+            />
+            <label for="date">Data transakcji</label>
+            <input type="date" class="dateInput" />
+            <label for="type">Wybierz rodzaj transakcji</label>
+            <select name="type" class="typeInput">
+              <option value="" disabled selected>-- Wybierz rodzaj --</option>
+              <option value="income">Przychód +</option>
+              <option value="expense">Wydatek -</option>
+            </select>
+            <label for="amount">Wpisz kwotę </label>
+            <input
+              type="number"
+              placeholder="Wpisz kwotę"
+              class="amountInput"
+            />
+            <div class="buttons">
+              <button class="accept">Akcept</button
+              ><button class="delete">Usuń wszystko</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

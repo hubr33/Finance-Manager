@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$white-color: rgb(255, 255, 255);
+$black-color: rgb(20, 22, 31);
+$incoming-color: rgba(0, 255, 0, 0.4);
+$expense-color: rgba(255, 0, 0, 0.4);
+$error-color: rgba(255, 0, 0, 0.6);
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.wrapper {
+  width: 100%;
+  height: 100vh;
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(192, 192, 192);
+    h2 {
+      font-size: 60px;
+      font-family: "Odibee Sans", cursive;
+      height: 100%;
+      padding-left: 20px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 30px;
+      button {
+        font-family: "Dosis", sans-serif;
+        text-transform: uppercase;
+        padding: 6px 20px;
+        margin-left: 10px;
+        height: 50%;
+        border: none;
+        border-radius: 6px;
+        font-size: 20px;
+        letter-spacing: 2px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .black {
+        background-color: $black-color;
+        color: $white-color;
+      }
+      .white {
+        background-color: $white-color;
+        color: $black-color;
+      }
+    }
+  }
+  main {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 80px);
+    background-color: $white-color;
+    aside {
+      width: 40%;
+      height: 90%;
+      div.title {
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        font-size: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Dosis", sans-serif;
+      }
+      div.transactions {
+        position: relative;
+        overflow: scroll;
+        width: 100%;
+        height: calc(100% - 40px);
+        div.singleOperation {
+          margin: 6px 0 0 10px;
+          width: 94%;
+          background-color: $incoming-color;
+          height: 60px;
+          display: flex;
+          border-radius: 6px;
+          overflow: hidden;
+          font-family: "Dosis", sans-serif;
+          font-size: 18px;
+          &.exp {
+            background-color: $expense-color;
+          }
+          div.operationDate {
+            @include flexCenter;
+            width: 15%;
+            height: 100%;
+          }
+          div.operationTitle {
+            @include flexCenter;
+            justify-content: flex-start;
+            width: 65%;
+            height: 100%;
+            font-weight: bold;
+          }
+          div.operationAmount {
+            @include flexCenter;
+            width: 20%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    section {
+      @include flexCenter;
+      flex-direction: column;
+      width: 60%;
+      height: 90%;
+      div.balance {
+        @include flexCenter;
+        width: 100%;
+        height: 80px;
+        font-family: "Dosis", sans-serif;
+        font-size: 40px;
+        p {
+          margin: 0 10px;
+        }
+      }
+      div.addTransaction {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 600px;
+        height: calc(100% - 80px);
+        font-family: "Dosis", sans-serif;
+        font-weight: bold;
+        label {
+          text-align: center;
+          width: 100%;
+          font-size: 28px;
+          p {
+            font-size: 14px;
+          }
+        }
+        input,
+        select {
+          width: 80%;
+          height: 30px;
+          outline: none;
+          border-radius: 4px;
+          &.err {
+            background-color: $error-color;
+          }
+        }
+        .buttons {
+          display: flex;
+          justify-content: space-evenly;
+          width: 100%;
+          .accept,
+          .delete {
+            font-family: "Dosis", sans-serif;
+            font-size: 20px;
+            padding: 4px 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: $white-color;
+            color: $black-color;
+            border: 2px solid $black-color;
+            transition: 0.2s;
+            &:hover {
+              cursor: pointer;
+              background-color: $black-color;
+              color: $white-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

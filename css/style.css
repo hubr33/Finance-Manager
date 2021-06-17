@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+div.wrapper header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  background-color: silver;
+}
+
+div.wrapper header h2 {
+  font-size: 60px;
+  font-family: "Odibee Sans", cursive;
+  height: 100%;
+  padding-left: 20px;
+}
+
+div.wrapper header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 30px;
+}
+
+div.wrapper header nav button {
+  font-family: "Dosis", sans-serif;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  margin-left: 10px;
+  height: 50%;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+div.wrapper header nav button:hover {
+  cursor: pointer;
+}
+
+div.wrapper header nav .black {
+  background-color: #14161f;
+  color: white;
+}
+
+div.wrapper header nav .white {
+  background-color: white;
+  color: #14161f;
+}
+
+div.wrapper main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: calc(100% - 80px);
+  background-color: white;
+}
+
+div.wrapper main aside {
+  width: 40%;
+  height: 90%;
+}
+
+div.wrapper main aside div.title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Dosis", sans-serif;
+}
+
+div.wrapper main aside div.transactions {
+  position: relative;
+  overflow: scroll;
+  width: 100%;
+  height: calc(100% - 40px);
+}
+
+div.wrapper main aside div.transactions div.singleOperation {
+  margin: 6px 0 0 10px;
+  width: 94%;
+  background-color: rgba(0, 255, 0, 0.4);
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: "Dosis", sans-serif;
+  font-size: 18px;
+}
+
+div.wrapper main aside div.transactions div.singleOperation.exp {
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+div.wrapper main aside div.transactions div.singleOperation div.operationDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15%;
+  height: 100%;
+}
+
+div.wrapper main aside div.transactions div.singleOperation div.operationTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 65%;
+  height: 100%;
+  font-weight: bold;
+}
+
+div.wrapper main aside div.transactions div.singleOperation div.operationAmount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+  height: 100%;
+}
+
+div.wrapper main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  height: 90%;
+}
+
+div.wrapper main section div.balance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 80px;
+  font-family: "Dosis", sans-serif;
+  font-size: 40px;
+}
+
+div.wrapper main section div.balance p {
+  margin: 0 10px;
+}
+
+div.wrapper main section div.addTransaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 600px;
+  height: calc(100% - 80px);
+  font-family: "Dosis", sans-serif;
+  font-weight: bold;
+}
+
+div.wrapper main section div.addTransaction label {
+  text-align: center;
+  width: 100%;
+  font-size: 28px;
+}
+
+div.wrapper main section div.addTransaction label p {
+  font-size: 14px;
+}
+
+div.wrapper main section div.addTransaction input,
+div.wrapper main section div.addTransaction select {
+  width: 80%;
+  height: 30px;
+  outline: none;
+  border-radius: 4px;
+}
+
+div.wrapper main section div.addTransaction input.err,
+div.wrapper main section div.addTransaction select.err {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+div.wrapper main section div.addTransaction .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+}
+
+div.wrapper main section div.addTransaction .buttons .accept,
+div.wrapper main section div.addTransaction .buttons .delete {
+  font-family: "Dosis", sans-serif;
+  font-size: 20px;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: white;
+  color: #14161f;
+  border: 2px solid #14161f;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+div.wrapper main section div.addTransaction .buttons .accept:hover,
+div.wrapper main section div.addTransaction .buttons .delete:hover {
+  cursor: pointer;
+  background-color: #14161f;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
